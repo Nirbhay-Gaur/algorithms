@@ -1,5 +1,11 @@
+package week_1;
+
 public class QuickFind {
     private int[] index = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+    public static void main(String[] args) {
+
+    }
 
     public boolean find(int a, int b) {
         return index[a] == index[b];

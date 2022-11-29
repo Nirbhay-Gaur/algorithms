@@ -1,3 +1,5 @@
+package week_1;
+
 public class QuickUnion {
     private int[] index = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
@@ -15,5 +17,9 @@ public class QuickUnion {
         int rootB = root(b);
         if(rootA == rootB) return;
         index[rootA] = rootB;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
