@@ -1,4 +1,4 @@
-package week_1;
+package week_1.assignments;
 
 import java.util.Arrays;
 
