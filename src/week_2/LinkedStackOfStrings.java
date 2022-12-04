@@ -35,10 +35,10 @@ public class LinkedStackOfStrings {
     }
 
     public String pop() {
-        Node temp = first;
+        String string = first.item;
         first = first.next;
         size--;
-        return temp.item;
+        return string;
     }
 
     private static class Node {
