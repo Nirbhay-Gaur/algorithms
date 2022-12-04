@@ -2,7 +2,7 @@ package week_1;
 
 public class ThreeSum {
     public static void main(String[] args) {
-        int[] a = new int[]{30, -40, -20, -10, 40, 0, 10, 5};
+        int[] a = new int[]{-40, -20, -10, 0, 5, 10, 30, 40};
 
         System.out.println(ThreeSum.count(a));
     }
@@ -13,13 +13,29 @@ public class ThreeSum {
 
         for (int i = 0; i < length; i++) {
             for (int j = i + 1; j < length; j++) {
-                for (int k = j + 1; k < length; k++) {
-                    if (array[i] + array[j] + array[k] == 0) {
-                        count++;
-                    }
+                int idx = binarySearch(array, -(array[i] + array[j]));
+                if (idx != -1) {
+                    System.out.println(array[idx]);
+                    count++;
                 }
             }
         }
         return count;
+    }
+
+    public static int binarySearch(int[] arr, int x) {
+        int hi = arr.length;
+        int lo = 0;
+
+        while (hi > lo) {
+            int mid = lo + (hi - lo) / 2;
+            if (arr[mid] == x) return mid;
+            else if (arr[mid] > x) {
+                hi = mid - 1;
+            } else if (arr[mid] < x) {
+                lo = mid + 1;
+            }
+        }
+        return -1;
     }
 }
