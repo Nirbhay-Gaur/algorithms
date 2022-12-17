@@ -39,7 +39,7 @@ public class CountInversions {
             else if (j > high) a[k] = aux[i++];
             else if (aux[i] > aux[j]) {
                 a[k] = aux[j++];
-                counter += mid - i + 1
+                counter += mid - i + 1;
             } else a[k] = aux[i++];
         }
     }
