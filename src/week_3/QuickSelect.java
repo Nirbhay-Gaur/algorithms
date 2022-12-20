@@ -9,7 +9,7 @@ public class QuickSelect {
             while (a[++i] < a[low])
                 if (i == high) break;
             while (a[low] < a[--j])
-                if (j == high) break;
+                if (j == low) break;
 
             if (i >= j) break;
             int t = a[i];
