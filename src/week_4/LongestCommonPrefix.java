@@ -1,11 +1,9 @@
 package week_4;
 
-import java.util.Arrays;
-
 public class LongestCommonPrefix {
     public static void main(String[] args) {
 
-        String[] strings = new String[]{"dog", "cat", "racecar"};
+        String[] strings = new String[]{"nirbhay", "nirboi", "nigga"};
         String result = solve(strings);
         System.out.print(result);
     }
@@ -13,20 +11,15 @@ public class LongestCommonPrefix {
     public static String solve(String[] strs) {
         if (strs.length == 0) return "";
 
-        Arrays.sort(strs);
-
-        char[] first = strs[0].toCharArray();
-        char[] last = strs[strs.length - 1].toCharArray();
-
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < first.length; i++) {
-            if (first[i] != last[i]) {
-                break;
-            } else {
-                result.append(first[i]);
+        String pivot = strs[0];
+        for (int i = 0; i < pivot.length(); i++) {
+            char c = pivot.charAt(i);
+            for (int j = 1; j < strs.length; j++) {
+                if (i == strs[j].length() || c != strs[j].charAt(i)) {
+                    return pivot.substring(0, i);
+                }
             }
         }
-        return result.toString();
+        return pivot;
     }
 }
