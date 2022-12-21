@@ -1,4 +1,4 @@
-package week_3;
+package week_3.assignments;
 
 public class NutsAndBolts {
     public static void main(String[] args) {

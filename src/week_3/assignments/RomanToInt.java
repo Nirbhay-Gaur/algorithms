@@ -1,4 +1,4 @@
-package week_3;
+package week_3.assignments;
 
 import java.util.HashMap;
 
