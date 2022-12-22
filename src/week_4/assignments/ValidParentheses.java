@@ -1,4 +1,4 @@
-package week_4;
+package week_4.assignments;
 
 import java.util.Stack;
 

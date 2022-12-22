@@ -1,4 +1,4 @@
-package week_4;
+package week_4.assignments;
 
 public class PlusOne {
     public static void main(String[] args) {
